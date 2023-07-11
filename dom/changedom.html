@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Learning the DOM</title>
+  </head>
+
+  <body>
+   <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>React</li>
+   </ul>
+  </body>
+
+  <script>
+     // To-do list ul element
+     const todoList = document.querySelector('ul');
+
+    //  append child
+     const newlist =document.createElement('li');
+     newlist.textContent="python";
+     todoList.appendChild(newlist);
+
+    //  parentNode.insertBefore(newNode, nextSibling);
+     const anothertodo=document.createElement('li');
+     anothertodo.textContent='c++';
+     todoList.insertBefore(anothertodo,todoList.firstElementChild);
+
+
+    //  parentNode.replaceChild(newNode, oldNode);
+    const relist=document.createElement('li');
+    relist.textContent="DB";
+    todoList.replaceChild(relist,todoList.children[1]);
+
+    //remove child
+    todoList.removeChild(todoList.lastElementChild);
+
+    todoList.children[1].remove();
+
+
+
+
+
+        
+  </script>
+
+</html>
